@@ -25,6 +25,7 @@ void waitprocess()
     else if (pid > 0)
     {
         printf("this is parent, pid = %d\n", getpid());
+        // -1: meaning wait for any child process.
         waitpid(-1, &status, 0);
 //        wait(&status);
     }
